@@ -1,7 +1,25 @@
-=begin
-Write your code for the 'Darts' exercise in this file. Make the tests in
-`darts_test.rb` pass.
+class Darts
+  def initialize(x, y)
+    @x_coordinate = x
+    @y_coordinate = y
+  end
 
-To get started with TDD, see the `README.md` file in your
-`ruby/darts` directory.
-=end
+  def new
+  end
+
+  def score
+    distance_from_center = Math.hypot(@x_coordinate, @y_coordinate)
+
+    if distance_from_center > 10
+      score = 0
+    elsif distance_from_center > 5
+      score = 1
+    elsif distance_from_center > 1
+      score = 5
+    else
+      score = 10
+    end
+
+    return score
+  end
+end
