@@ -1,10 +1,7 @@
 class ResistorColorDuo
-  RESISTORS = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Violet", "Grey", "White"]
+  RESISTORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
 
   def self.value(colours)
-    num_one = RESISTORS.index(colours[0].capitalize)
-    num_two = RESISTORS.index(colours[1].capitalize)
-
-    result = (num_one.to_s + num_two.to_s).to_i
+    (RESISTORS.index(colours[0]).to_s + RESISTORS.index(colours[1]).to_s).to_i
   end
 end
