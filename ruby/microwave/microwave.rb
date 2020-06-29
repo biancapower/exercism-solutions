@@ -7,8 +7,9 @@ class Microwave
   end
 
   def timer
-    minutes = "00"
-    seconds = "01"
-    displaytime = minutes + ":" + seconds
+    minutes = @time / 60
+    seconds = @time % 60
+
+    display_time = format('%02d', minutes).to_s + ":" + format('%02d', seconds).to_s
   end
 end
