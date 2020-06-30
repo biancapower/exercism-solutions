@@ -1,21 +1,25 @@
 class HighScores
-  def initialize(game_score)
-    @game_score = game_score
+  def initialize(game_scores)
+    @game_scores = game_scores
   end
 
   def new
   end
 
   def scores
-    @game_score
+    @game_scores
   end
 
   def latest
-    @game_score.last
+    @game_scores.last
   end
 
   def personal_best
-    @game_score.max
+    @game_scores.max
+  end
+
+  def personal_top_three
+    @game_scores.sort.reverse[0..2]
   end
 end
 
