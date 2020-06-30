@@ -1,13 +1,8 @@
 class HighScores
-  def initialize(game_scores)
-    @game_scores = game_scores
-  end
+  attr_accessor :scores
 
-  def new
-  end
-
-  def scores
-    @game_scores
+  def initialize(scores)
+    @scores = scores
   end
 
   def latest
