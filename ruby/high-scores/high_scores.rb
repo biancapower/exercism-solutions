@@ -21,5 +21,9 @@ class HighScores
   def personal_top_three
     @game_scores.sort.reverse[0..2]
   end
+
+  def latest_is_personal_best?
+    self.latest == self.personal_best
+  end
 end
 
