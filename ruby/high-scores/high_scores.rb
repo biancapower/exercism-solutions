@@ -13,5 +13,9 @@ class HighScores
   def latest
     @game_score.last
   end
+
+  def personal_best
+    @game_score.max
+  end
 end
 
