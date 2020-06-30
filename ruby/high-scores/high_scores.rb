@@ -9,5 +9,9 @@ class HighScores
   def scores
     @game_score
   end
+
+  def latest
+    @game_score.last
+  end
 end
 
