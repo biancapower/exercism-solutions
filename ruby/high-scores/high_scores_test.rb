@@ -46,14 +46,14 @@ class HighScoresTest < Minitest::Test
   end
 
   def test_personal_top_when_there_are_less_than_3
-    skip
+    # skip
     scores = [30, 70]
     expected = [70, 30]
     assert_equal expected, HighScores.new(scores).personal_top_three
   end
 
   def test_personal_top_when_there_is_only_one
-    skip
+    # skip
     scores = [40]
     expected = [40]
     assert_equal expected, HighScores.new(scores).personal_top_three
