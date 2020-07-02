@@ -1,8 +1,7 @@
 class Matrix
   attr_reader :rows, :columns
-
+  
   def initialize(matrix)
-    @matrix = matrix
     @rows = process_input(matrix)
     @columns = rows.transpose
   end
