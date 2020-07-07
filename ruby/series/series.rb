@@ -1,8 +1,11 @@
-=begin
-Write your code for the 'Series' exercise in this file. Make the tests in
-`series_test.rb` pass.
+class Series
 
-To get started with TDD, see the `README.md` file in your
-`ruby/series` directory.
-=end
+  def initialize(digits)
+    @digits = digits
+  end
 
+  def slices(size)
+    #@digits.scan(/\d{#{size}}/)
+    @digits.scan(/(?=(\d{#{size}}))/).flatten
+  end
+end
